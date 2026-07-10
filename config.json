@@ -1,0 +1,19 @@
+{
+  "router_id": "isa-edge-01",
+  "layer0_matrix": {
+    "sync_interval_ms": 100,
+    "telemetry_forwarding": true,
+    "cross_border_routing": true
+  },
+  "topology": {
+    "nodes": [
+      { "id": "us-east-matrix", "host": "10.0.1.5", "port": 9001 },
+      { "id": "eu-central-matrix", "host": "10.0.2.5", "port": 9002 },
+      { "id": "ap-southeast-matrix", "host": "10.0.3.5", "port": 9003 }
+    ],
+    "jitter_mitigation": {
+      "threshold_ms": 15,
+      "adaptive_recovery": true
+    }
+  }
+}
