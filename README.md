@@ -15,13 +15,13 @@ As modern inference logic shifts toward localized edge execution (e.g., decentra
 To validate our microsecond-routing metrics under throttled bandwidth and real-world cross-border jitter, ISA relies on highly distributed concurrent computing fabrics. The framework is designed to bridge local hardware arrays with globally orchestrated hyperscaler environments.
 
 ### Simulated Fleet Setup Requirements
-
+```text
   [ Localized Edge Client Pool ]  <--- Low-Latency Localized Inferences
                 │
          (Zero-Trust Layer)
                 │
                 ▼
-  [ ISA Layer-0 Control Daemon ]  <--- Running core orchestrator.go loops
+  [ ISA Layer-0 Control Daemon ]  <--- Running core `orchestrator.go` loops
                 │
    ┌────────────┼────────────┐
    ▼            ▼            ▼
