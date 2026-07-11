@@ -37,7 +37,7 @@ func (ro *RouterOrchestrator) RegisterCloudTarget(id string, region string) erro
 	defer ro.mu.Unlock()
 
 	if id == "" {
-		return errors.New("invalid_node_identity")
+		return errors.New("invalid node identity")
 	}
 
 	ro.ClusterPool[id] = &TargetNode{
@@ -55,7 +55,7 @@ func (ro *RouterOrchestrator) RouteTelemetry(payload []byte, modelConfig string)
 	defer ro.mu.RUnlock()
 
 	if len(payload) == 0 {
-		return "", errors.New("empty_telemetry_payload")
+		return errors.New("empty telemetry payload")
 	}
 
 	// Cryptographic isolation: Ensure data stream integrity under zero-trust conditions
